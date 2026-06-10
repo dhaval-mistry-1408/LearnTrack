@@ -8,7 +8,7 @@ public class Enrollment {
 	private int studentId;
 	private int courseId;
 	private LocalDate enrollmentDate;
-	private String status;
+	private String status; //"ACTIVE", "COMPLETED", "CANCELLED"
 
 	public Enrollment(int id, int studentId, int courseId, LocalDate enrollmentDate, String status) {
 		super();

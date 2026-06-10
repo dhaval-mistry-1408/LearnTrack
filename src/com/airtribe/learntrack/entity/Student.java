@@ -37,4 +37,10 @@ public class Student extends Person {
 		return "Student: " + getFirstName() + " " + getLastName();
 	}
 
+	@Override
+	public String toString() {
+		return "Student [batch=" + batch + ", active=" + active + ", getBatch()=" + getBatch() + ", isActive()="
+				+ isActive() + ", getDisplayName()=" + getDisplayName() + "]";
+	}
+
 }
