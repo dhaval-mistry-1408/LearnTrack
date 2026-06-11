@@ -38,7 +38,7 @@ public class MenuService {
 					break;
 
 				case 3:
-					studentService.scanStudenIdFind(scanner);
+					studentService.scanStudentIdFind(scanner);
 					break;
 
 				case 4:
@@ -116,7 +116,7 @@ public class MenuService {
 			System.out.println("1. Enroll Student");
 			System.out.println("2. View Student Enrollments");
 			System.out.println("3. Mark Completed");
-			System.out.println("3. Mark Cancelled");
+			System.out.println("4. Mark Cancelled");
 			System.out.println("0. Back");
 
 			System.out.print("Enter choice: ");

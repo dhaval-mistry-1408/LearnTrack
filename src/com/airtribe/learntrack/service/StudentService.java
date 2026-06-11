@@ -55,12 +55,12 @@ public class StudentService {
 
 		try {
 			removeStudent(studentId);
+			System.out.println("Student removed");
+			System.out.println("_____________________________________");
 		} catch (EntityNotFoundException e) {
-			System.out.println("Studnet not found with ID: " + studentId);
+			System.out.println("Student not found with ID: " + studentId);
+			System.out.println("_____________________________________");
 		}
-
-		System.out.println("Student removed");
-		System.out.println("_____________________________________");
 	}
 
 	public static Student findStudent(int id) throws EntityNotFoundException {
@@ -73,17 +73,18 @@ public class StudentService {
 		throw new EntityNotFoundException("Student not found with ID: " + id);
 	}
 
-	public void scanStudenIdFind(Scanner scanner) {
+	public void scanStudentIdFind(Scanner scanner) {
 		System.out.print("Enter Student ID: ");
 		int id = Integer.parseInt(scanner.nextLine());
 
 		try {
 			Student foundStudent = findStudent(id);
 			System.out.println(foundStudent);
+			System.out.println("_____________________________________");
 		} catch (EntityNotFoundException e) {
-			System.out.println("Studnet not found.");
+			System.out.println("Student not found.");
+			System.out.println("_____________________________________");
 		}
-		System.out.println("_____________________________________");
 
 	}
 
