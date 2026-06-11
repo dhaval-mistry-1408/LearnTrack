@@ -8,9 +8,13 @@ public class Enrollment {
 	private int studentId;
 	private int courseId;
 	private LocalDate enrollmentDate;
-	private String status; //"ACTIVE", "COMPLETED", "CANCELLED"
+	private Status status;
 
-	public Enrollment(int id, int studentId, int courseId, LocalDate enrollmentDate, String status) {
+	public enum Status {
+		ACTIVE, COMPLETED, CANCELLED
+	}
+
+	public Enrollment(int id, int studentId, int courseId, LocalDate enrollmentDate, Status status) {
 		super();
 		this.id = id;
 		this.studentId = studentId;
@@ -51,12 +55,18 @@ public class Enrollment {
 		this.enrollmentDate = enrollmentDate;
 	}
 
-	public String getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Status status) {
 		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Enrollment [id=" + id + ", studentId=" + studentId + ", courseId=" + courseId + ", enrollmentDate="
+				+ enrollmentDate + ", status=" + status + "]";
 	}
 
 }

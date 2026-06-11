@@ -57,4 +57,10 @@ public class Course {
 		this.active = active;
 	}
 
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", courseName=" + courseName + ", description=" + description + ", durationInWeeks="
+				+ durationInWeeks + ", active=" + active + "]";
+	}
+
 }
